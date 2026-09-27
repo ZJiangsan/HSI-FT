@@ -1,0 +1,8 @@
+FINAL FIXED-TRIPLET HEADLINE SUMMARY — FIVE RECONSTRUCTION SEEDS
+======================================================================
+Measured HSI: R2=0.8469 +/- 0.0026; RMSE=5.7512
+SimpleMLP: R2=0.6562 +/- 0.0039; deltaR2=0.1907 +/- 0.0039; deltaRMSE=2.8671; prediction-shift RMSE=6.4981; spectral RMSE=0.013910; SAM=3.7457
+AdjustedU2MDN: R2=0.6712 +/- 0.0056; deltaR2=0.1757 +/- 0.0056; deltaRMSE=2.6769; prediction-shift RMSE=6.2681; spectral RMSE=0.014264; SAM=3.8076
+Gram: R2=0.7360 +/- 0.0074; deltaR2=0.1109 +/- 0.0074; deltaRMSE=1.7976; prediction-shift RMSE=4.9500; spectral RMSE=0.014956; SAM=4.0946
+Gram reduction in mean deltaR2 vs SimpleMLP: 41.8%
+Gram reduction in mean deltaR2 vs AdjustedU2MDN: 36.9%
