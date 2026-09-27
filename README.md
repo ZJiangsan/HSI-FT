@@ -89,6 +89,9 @@ HSI-FT/
 ├── run_reconstruction.py
 ├── final_transfer_diagnostics.py
 ├── run_final_pipeline.py
+├── preprocessing/
+│   ├── prepare_40band_data.py
+│   └── README.md
 ├── data/
 │   └── README.md
 ├── docs/
@@ -119,7 +122,7 @@ original190_paper_reproduction/subplot_metadata.csv
 original190_paper_reproduction/sl_masks/
 ```
 
-The 40-band cubes and subplot-mask/metadata preprocessing are the same upstream data preparation used in the companion repository:
+`preprocessing/prepare_40band_data.py` creates the fixed 40-band cubes from the released 190-band cubes. The subplot-mask/metadata preprocessing is the same frozen upstream benchmark used in the companion repository:
 
 https://github.com/ZJiangsan/HSIRecon-Transfer
 
@@ -133,13 +136,19 @@ Set the data root if it differs from the original experiment:
 export HSIWHEAT40_ROOT=/path/to/HSIwheat_40
 ```
 
+### 0. Prepare the 40-band cubes and frozen upstream subplot objects
+
+Run `preprocessing/prepare_40band_data.py` for the 40-band cubes. The frozen subplot metadata and spike-and-leaf masks are shared with the companion HSIwheat benchmark; see `preprocessing/README.md`.
+
 ### 1. Create the frozen plot split and train the train-only decomposition
 
 ```bash
 python train_decomposition_and_split.py
 ```
 
-This writes the frozen plot split and decomposition outputs under:
+This deterministically creates the plot split (seed 2026) and trains the train-only decomposition. The reported run selected its best state at epoch 12378; the public script defaults to epochs 0–12378 and notes that exact floating-point identity can depend on the PyTorch/CUDA environment.
+
+Outputs are written under:
 
 ```text
 decomposition_train_only_seed2026/
