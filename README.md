@@ -36,8 +36,11 @@ A plot-disjoint split is created **before decomposition or reconstruction fittin
 - 96 validation plots
 - 50 held-out test plots
 
-The split uses NumPy RNG seed `2026` and is saved as
-`decomposition_train_only_seed2026/reconstruction_plot_split.csv`.
+The split uses NumPy RNG seed `2026`. The exact frozen split used in the manuscript is committed in this repository as:
+
+`splits/reconstruction_plot_split.csv`
+
+For portability, the repository copy contains only `split`, `split_seed`, `field`, and `plot`; the original machine-specific absolute path column was removed.
 
 ### Reconstruction seeds
 
@@ -79,6 +82,7 @@ No reconstruction-specific scaler fitting or downstream retraining is permitted 
 HSI-FT/
 ├── README.md
 ├── requirements.txt
+├── LICENSE
 ├── .gitignore
 ├── config.py
 ├── common.py
@@ -89,6 +93,8 @@ HSI-FT/
 ├── run_reconstruction.py
 ├── final_transfer_diagnostics.py
 ├── run_final_pipeline.py
+├── splits/
+│   └── reconstruction_plot_split.csv
 ├── preprocessing/
 │   ├── prepare_40band_data.py
 │   └── README.md
@@ -233,6 +239,10 @@ Test labels are used only for final held-out performance calculation.
 ## Large generated files
 
 Reconstructed test cubes and neural-network checkpoints are intentionally not committed. They can occupy many gigabytes. The final analysis caches `yield_test_features.npy` for each reconstruction run; after those caches are verified, full reconstructed cubes can be archived if disk space is needed.
+
+## License
+
+This repository is released under the **MIT License**. See [LICENSE](LICENSE).
 
 ## Citation
 
