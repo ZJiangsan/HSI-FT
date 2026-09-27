@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Environments / IDE
+.venv/
+venv/
+.env
+.spyproject/
+.vscode/
+
+# Large data and model outputs
+*.pth
+*.pt
+*.ckpt
+*.npy
+*.npz
+*.pkl
+*.pickle
+
+# Generated reconstruction/yield outputs
+cache/
+reconstruction/
+yield_transfer/
+diagnostics/
+hsi_ft_outputs/
+
+# OS
+.DS_Store
+Thumbs.db
