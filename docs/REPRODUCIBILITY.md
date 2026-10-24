@@ -138,3 +138,7 @@ The final analysis reports:
 - prediction shift.
 
 These are held-out diagnostics only and are never used to select checkpoints or hyperparameters.
+
+## Secondary frozen-model diagnostics
+
+See [Secondary analyses](SECONDARY_ANALYSES.md) for 2,000 paired plot-bootstrap resamples, held-out feature-group substitutions, the analysis command, and archived summary and per-seed CSVs. These analyses reuse frozen checkpoints and do not retrain models.
