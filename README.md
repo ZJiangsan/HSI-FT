@@ -247,3 +247,7 @@ This repository is released under the **MIT License**. See [LICENSE](LICENSE).
 ## Citation
 
 Please cite the associated manuscript when using this code. A final DOI/citation can be added after publication or preprint posting.
+
+## Secondary analyses
+
+Paired plot-bootstrap uncertainty and frozen-model mean/SD feature-substitution diagnostics are documented in [Secondary analyses](docs/SECONDARY_ANALYSES.md). Reproducible code: [`HSI_FT_additional_analyses.py`](HSI_FT_additional_analyses.py); CSV outputs are under `results/additional_*`.
