@@ -247,3 +247,12 @@ This repository is released under the **MIT License**. See [LICENSE](LICENSE).
 ## Citation
 
 Please cite the associated manuscript when using this code. A final DOI/citation can be added after publication or preprint posting.
+
+## Supplementary analyses
+
+The additional reconstructed-input yield training, 80-feature comparison, plot-cluster
+bootstrap, Savitzky–Golay/PCA controls, plot-structure controls, and alternative
+yield-stratified measured-HSI sensitivity check are documented in
+[`supplementary/README.md`](supplementary/README.md). The reported alternative-split
+five-seed metrics are archived in
+[`results/stratified_measured_hsi_5seeds.csv`](results/stratified_measured_hsi_5seeds.csv).
